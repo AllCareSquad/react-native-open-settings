@@ -1,5 +1,5 @@
 {
-  "name": "react-native-open-settings",
+  "name": "@enixyu/react-native-open-settings",
   "version": "0.1.0",
   "description": "react native open system settings",
   "main": "lib/commonjs/index",
