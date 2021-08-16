@@ -1,6 +1,6 @@
 {
-  "name": "@enixyu/react-native-open-settings",
-  "version": "0.1.0",
+  "name": "@robotbros/react-native-open-settings",
+  "version": "1.0.0",
   "description": "react native open system settings",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -44,7 +44,8 @@
   },
   "homepage": "https://github.com/enix223/react-native-open-settings#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
