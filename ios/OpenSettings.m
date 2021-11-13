@@ -13,13 +13,15 @@ RCT_REMAP_METHOD(open,
                  withRejecter:(RCTPromiseRejectBlock)reject)
 {
     NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
-        resolve(@(YES));
-    } else {
-        NSError *error = [NSError errorWithDomain:@"not support" code:-1 userInfo:nil];
-        reject(@"-1", error.domain, error);
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+            resolve(@(YES));
+        } else {
+            NSError *error = [NSError errorWithDomain:@"not support" code:-1 userInfo:nil];
+            reject(@"-1", error.domain, error);
+        }
+    });
 }
 
 @end
