@@ -1,6 +1,6 @@
 {
   "name": "@robotbros/react-native-open-settings",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "react native open system settings",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
